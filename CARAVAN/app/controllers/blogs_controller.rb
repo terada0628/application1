@@ -1,6 +1,8 @@
 class BlogsController < ApplicationController
+  
   def index
     @blogs = Blog.all
+
   end
 
   def show
@@ -15,6 +17,7 @@ class BlogsController < ApplicationController
 
   def create
     blog = Blog.new(blog_params)
+
     blog.save
     # 以下の行を修正
     redirect_to blog_path(blog.id)

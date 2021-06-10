@@ -40,14 +40,14 @@
     <div class="blog-box">
       <!--ここから変更-->
       <% @blogs.each do |blog| %>
-      <div class="blog-item">
+       <div class="blog-item">
         <%= image_tag('img/forest.jpg', class: 'blog-image') %>
         <section class="blog-text">
           <h3 class="blog-text-heading"><%= link_to blog.title,blog_path(blog) %></h3>
           <p class="blog-date"><%= blog.created_at %></p>
           <span class="category"><%= blog.category %></span>
         </section>
-      </div>
+       </div>
       <% end %>
       <!--ここまで変更-->
       <div class="blog-item">
